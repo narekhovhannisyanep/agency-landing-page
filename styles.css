@@ -169,7 +169,37 @@ body {
 
 /* Many blocks styles */
 .many-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     margin-top: 60px;
+}
+
+.many-blocks__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.many-blocks__title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1E0E62;
+}
+
+.many-blocks__description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #15143966;
+}
+
+.many-blocks__btn {
+    width: min-content;
+    padding: 8px 16px;
+    border-radius: 32px;
+    background: none;
+    font-weight: 500;
+    color: #1E0E62;
 }
 
 @media (min-width: 640px) {
@@ -255,6 +285,14 @@ body {
 
     .vision-card__title {
         font-size: 32px;
+    }
+
+    .many-blocks {
+        flex-direction: row;
+    }
+
+    .many-blocks__text {
+        justify-content: space-between;
     }
 }
 
