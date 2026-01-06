@@ -7,7 +7,7 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -46,6 +46,21 @@ body {
 .btn_white:hover {
     background: gray;
     color: #fff;
+}
+
+.section-prefix {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 45%;
+    text-align: center;
+    color: #8A898E;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #0B1B35;
 }
 
 /* Header styles */
@@ -129,19 +144,6 @@ body {
     text-align: center;
 }
 
-.vision__prefix {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 45%;
-    color: #8A898E;
-}
-
-.vision__title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #0B1B35;
-}
-
 .vision-cards {
     display: flex;
     flex-direction: column;
@@ -195,11 +197,53 @@ body {
 
 .many-blocks__btn {
     width: min-content;
-    padding: 8px 16px;
+    padding: 8px 32px;
+    border: 2px solid #EBEAED;
     border-radius: 32px;
     background: none;
     font-weight: 500;
     color: #1E0E62;
+}
+
+/* Testimonials styles */
+.testimonials {
+    margin-top: 60px;
+}
+
+.testimonials-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.testimonial-card {
+    display: flex;
+    gap: 32px;
+}
+
+.testimonial-card__img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.testimonial-card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.testimonial-card__testimonial {
+    font-size: 18px;
+    font-weight: 500;
+    color: #0B1B35;
+}
+
+.testimonial-card__name {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #696e77;
 }
 
 @media (min-width: 640px) {
@@ -294,6 +338,10 @@ body {
     .many-blocks__text {
         justify-content: space-between;
     }
+
+    .testimonials-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1280px) {
@@ -310,5 +358,3 @@ body {
     }
 
 }
-
-/* @media (min-width: 1536px) {} */
