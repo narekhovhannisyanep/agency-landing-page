@@ -7,17 +7,91 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
     margin-left: auto;
     margin-right: auto;
-    height: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.menu__item_active {
+    font-weight: 700
+}
+
+.login {
+    transition: all 0.3s ease;
+}
+
+.login__log-in {
+    padding: 8px 16px;
+    border: 1px solid #727272;
+    border-radius: 8px;
+    background: none;
+    transition: inherit;
+}
+
+.login__log-in:hover {
+    background: gray;
+    color: #fff;
+}
+
+.login__sign-up {
+    margin-left: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #FF6600;
+    color: #fff;
+    transition: inherit;
+}
+
+.login__sign-up:hover {
+    background: #c34f02;
+    color: #fff;
 }
 
 @media (min-width: 640px) {
     .container {
         max-width: 640px;
+    }
+
+    .header {
+        margin-top: 8px;
     }
 }
 
@@ -25,11 +99,38 @@ html {
     .container {
         max-width: 768px;
     }
+
+    .header {
+
+        margin-top: 16px;
+    }
+
+    .header ul {
+        gap: 12px;
+    }
+
 }
 
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .header ul {
+        flex-direction: row;
+
+        gap: 24px;
+    }
+
+    .login__sign-up {
+        margin-left: 24px;
     }
 }
 
@@ -37,6 +138,15 @@ html {
     .container {
         max-width: 1170px;
     }
+
+    .header {
+        margin-top: 48px;
+    }
+
+    .header ul {
+        gap: 40px;
+    }
+
 }
 
 /* @media (min-width: 1536px) {} */
