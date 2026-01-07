@@ -52,6 +52,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 45%;
+    text-transform: uppercase;
     text-align: center;
     color: #8A898E;
 }
@@ -214,10 +215,12 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-top: 32px;
 }
 
 .testimonial-card {
     display: flex;
+    align-items: flex-start;
     gap: 32px;
 }
 
@@ -243,8 +246,72 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #696e77;
+    color: #afb8c8;
 }
+
+/* Team styles */
+.team {
+    margin-top: 60px;
+}
+
+.member-cards {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #EBEAED;
+    border-radius: 12px;
+    padding-top: 24px;
+    gap: 12px;
+    text-align: center;
+}
+
+.member-card:hover {
+    cursor: pointer;
+}
+
+.member-card:active {
+    background: #e3e3e3;
+}
+
+.member-card__name {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1E0E62;
+}
+
+.member-card__role {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #15143966;
+}
+
+.member-card__socials {
+    display: flex;
+    border-top: 2px solid #EBEAED;
+    width: 100%;
+}
+
+.member-card__social-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 33%;
+    padding: 16px;
+    border-right: 2px solid #EBEAED;
+}
+
+.member-card__social-icon-wrapper:last-of-type {
+    border-right: none;
+}
+
 
 @media (min-width: 640px) {
     .container {
@@ -337,8 +404,28 @@ body {
         justify-content: space-between;
     }
 
+    .testimonials {
+        margin-top: 120px;
+    }
+
     .testimonials-cards {
+        margin-top: 96px;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team {
+        margin-top: 120px;
+    }
+
+    .member-cards {
+        flex-direction: row;
+        margin-top: 64px;
+    }
+
+    .member-card {
+        flex: 1 1 33%;
+        gap: 16px;
+        padding-top: 48px;
     }
 }
 
